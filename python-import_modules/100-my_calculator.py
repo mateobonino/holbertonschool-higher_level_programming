@@ -23,5 +23,5 @@ if __name__ == "__main__":
         print(result, end=" ")
         print("{}".format(div(int(sys.argv[1]), int(sys.argv[3]))))
     else:
-        print("Unknown operator. Available operators: +, -, *, and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
