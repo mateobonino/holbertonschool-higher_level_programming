@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-"""Script that creates a Square named class"""
+"""Define a class Square."""
 
 
 class Square():
-    """"Defines a square"""
+    """Represent a square."""
+
     def __init__(self, size=0):
+        """Initialize a new Square.
+        size (int): The size of the new square"""
         self.__size = size
 
     @propety
     def size(self):
-        # """Returns the size of the square"""
+        """Get/set the current size of the square."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        # """Defines the value of size"""
+        """Sets the size to a value.""""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -22,5 +25,5 @@ class Square():
         self.__size = value
 
     def area(self):
-        # """Returns the area of the square"""
+        """Returns the current square area"""
         return self.__size ** 2
