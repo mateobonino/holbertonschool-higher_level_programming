@@ -17,16 +17,15 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if type(div) is not float and type(div) is not int:
         raise TypeError("div must be a number")
-    matrix_len = len(matrix[0])
     for mtr_len in matrix:
-        if len(mtr_len) != matrix_len:
+        if len(mtr_len) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
     for row in matrix:
-        if not isinstance(row, list):
+        if type(row) is not list:
             raise TypeError("matrix must be a matrix (list of lists) " +
                             "of integers/floats")
         for column in row:
-            if not isinstance(column, int) and not isinstance(column, float):
+            if type(column) is not int and type(column) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) " +
                                 "of integers/floats")
     squared_matrix = []
