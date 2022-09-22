@@ -17,5 +17,5 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
     squared_matrix = []
     for i in matrix:
-        squared_matrix.append([round(j / div) for j in i])
+        squared_matrix.append([round(j / div, 2) for j in i])
     return squared_matrix
