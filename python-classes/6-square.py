@@ -25,7 +25,6 @@ class Square:
 
     @property
     def size(self):
-        """Get/set the current size of the square."""
         return self.__size
 
     @property
@@ -33,11 +32,9 @@ class Square:
         return self.__position
 
     def area(self):
-        """Returns the current square area"""
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square"""
         if self.__size == 0:
             print("")
             return
