@@ -21,14 +21,15 @@ def matrix_divided(matrix, div):
     for i in matrix:
         if len(i) != matrix_len:
             raise TypeError("Each row of the matrix must have the same size")
-    for j in matrix:
-        if not isinstance(j, list):
+    for row in matrix:
+        if not isinstance(row, list):
             raise TypeError("matrix must be a matrix (list of lists) " +
                             "of integers/floats")
+    for j in matrix:
         for k in j:
-            if type(k) is not int and type(k) is not float:
+            if not isinstance(k, int) and not isinstance(k, float):
                 raise TypeError("matrix must be a matrix (list of lists) " +
-                                "of integers/floats")
+                            "of integers/floats")
     squared_matrix = []
     for i in matrix:
         squared_matrix.append([round(j / div, 2) for j in i])
