@@ -8,9 +8,9 @@ class Square:
     __position = (0, 0)
 
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(value, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         self.__position = position
         self.__size = size
