@@ -23,11 +23,11 @@ Using ``add_integer``
     >>> add_integer(-5, -10)
     -15
 
-    >>> add_integer(1.0, 2.0)
-    3
+    >>> add_integer(1.0, 2.3)
+    3.3
 
     >>> add_integer(10, -6)
     4
 
-    >>> add_integer(4, 6.0)
-    10
+    >>> add_integer(4, 6.2)
+    10.2
