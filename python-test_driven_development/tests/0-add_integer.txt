@@ -19,3 +19,15 @@ Using ``add_integer``
     >>> add_integer(float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(-5, -10)
+    -15
+
+    >>> add_integer(1.0, 2.0)
+    3.0
+
+    >>> add_integer(10, -6)
+    4
+
+    >>> add_integer(4, 6.0)
+    10.0
