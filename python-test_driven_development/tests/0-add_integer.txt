@@ -24,10 +24,10 @@ Using ``add_integer``
     -15
 
     >>> add_integer(1.0, 2.0)
-    3.0
+    3
 
     >>> add_integer(10, -6)
     4
 
     >>> add_integer(4, 6.0)
-    10.0
+    10
