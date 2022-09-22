@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from typing import Type
-
-
 def add_integer(a, b=98):
     if not isinstance(a, int) or not isinstance(a, float):
         raise TypeError("a must be an integer")
@@ -13,4 +10,3 @@ def add_integer(a, b=98):
     elif isinstance(b, float):
         b = int(b)
     return (a + b)
-    
