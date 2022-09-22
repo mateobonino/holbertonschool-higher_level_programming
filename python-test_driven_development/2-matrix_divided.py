@@ -10,7 +10,7 @@ def matrix_divided(matrix, div):
     if div is None:
         raise TypeError("matrix_divided() missing 1 required " +
                         "positional argument: 'div'")
-    if not isinstance(matrix, list):
+    if not isinstance(matrix, list) or matrix == []:
         raise TypeError("matrix must be a matrix (list of lists) " +
                         "of integers/floats")
     if div == 0:
