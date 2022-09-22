@@ -4,6 +4,12 @@
 
 def matrix_divided(matrix, div):
     """Divides a matrix"""
+    if matrix is None:
+        raise TypeError("add_integer() missing 1 required " + 
+                        "positional argument: 'matrix'")
+    if div is None:
+        raise TypeError("add_integer() missing 1 required " + 
+                        "positional argument: 'div'") 
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) " +
                         "of integers/floats")
