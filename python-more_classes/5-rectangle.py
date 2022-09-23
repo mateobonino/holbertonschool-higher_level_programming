@@ -33,7 +33,7 @@ class Rectangle():
         self.__height = value
 
     def __del__(self):
-        return "Bye rectangle..."
+        print("Bye rectangle...")
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
