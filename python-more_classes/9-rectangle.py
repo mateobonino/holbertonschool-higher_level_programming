@@ -36,6 +36,7 @@ class Rectangle():
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
 
