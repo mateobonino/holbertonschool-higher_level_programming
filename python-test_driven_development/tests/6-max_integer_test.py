@@ -10,11 +10,8 @@ class TestMaxInteger(unittest.TestCase):
     def negative_expected(self):
         self.assertEqual(max_integer([-5, -15, -3, -6]), -15)
 
-    def float_list(self):
-        self.assertEqual(max_integer([10.5, 16.7, 0.5]), 16.7)
-
-    def strings_error(self):
-        self.assertEqual(max_integer(["this", "is", "a", "unittest"]), "unittest")
+    def empty_list(self):
+        self.assertEqual(max_integer([]), None)
 
 if __name__ == "__main__":
     unittest.main()
