@@ -37,7 +37,7 @@ class Rectangle():
         self.__height = value
 
     def square(cls, size=0):
-        return cls(size, size)
+        return Rectangle(size, size)
 
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
