@@ -1,9 +1,12 @@
+#!/usr/bin/python3
+"""Unit testing"""
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
-
-
     def normal_list(self):
         self.assertEqual(max_integer([1, 3, 7, 11]), 11)
 
@@ -12,6 +15,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def empty_list(self):
         self.assertEqual(max_integer([]), None)
+
 
 if __name__ == "__main__":
     unittest.main()
