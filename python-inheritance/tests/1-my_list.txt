@@ -16,13 +16,10 @@
 
         >>> list_class.append(-100)
 
-        >>> list_class.append(-5)
-
-        >>> list_class.append(7)
-
         >>> list_class.print_sorted()
-        [-100, -5, 7, 10]
+        [-100, 10]
 
     >>> list_class = MyList()
+
         >>> list_class.print_sorted()
         []
