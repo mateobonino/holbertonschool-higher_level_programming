@@ -1,6 +1,7 @@
 >>> MyList = __import__('1-my_list').MyList
 
     >>> list_class = MyList()
+
         >>> list_class.append(5)
 
         >>> list_class.append(3)
