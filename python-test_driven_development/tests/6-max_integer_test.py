@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1]), 1)
 
     def empty_list(self):
-        self.assertRaises(TypeError, max_integer(), None)
+        self.assertRaises(TypeError, max_integer([]), None)
 
     
 
