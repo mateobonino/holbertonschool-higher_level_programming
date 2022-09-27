@@ -40,6 +40,8 @@
     TypeError: age must be an integer
 
     >>> bgeo.integer_validator("age", True)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
     >>> bgeo.integer_validator("age", {3, 4})
     Traceback (most recent call last):
