@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Square class that inherits from Rectangle and Base Geomatry Class
+SAMPLE TEXT
 """
 
 
@@ -8,8 +8,7 @@ Rectangle = __import__('9-rectangle.py').Rectangle
 
 
 class Square(Rectangle):
-    """Defines a square that inherits from 'integer_validator' function
-    from Rectangle and Base Geometry Class
+    """SAMPLE TEXT
     a
     b
     c
