@@ -1,20 +1,12 @@
 #!/usr/bin/python3
-"""
-SAMPLE TEXT
-SAMPLE TEXT
-"""
+"""Square Module"""
 
 
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 
 class Square(Rectangle):
-    """SAMPLE TEXT
-    sample text
-    sAmPle tExT
-    c
-    d
-    """
+    """Square Class"""
     def __init__(self, size):
         self.integer_validator("size", size)
         self.__size = size
