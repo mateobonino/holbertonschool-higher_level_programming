@@ -11,8 +11,8 @@
 
     >>> bgeo.integer_validator("name", "John")
     Traceback (most recent call last):
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
     >>> bgeo.integer_validator("test", -1)
     Traceback (most recent call last):
-    ValueError: <name> must be greater than 0
+    ValueError: test must be greater than 0
