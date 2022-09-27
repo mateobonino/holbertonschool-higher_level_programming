@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 SAMPLE TEXT
+SAMPLE TEXT
 """
 
 
@@ -9,8 +10,8 @@ Rectangle = __import__('9-rectangle.py').Rectangle
 
 class Square(Rectangle):
     """SAMPLE TEXT
-    a
-    b
+    sample text
+    sAmPle tExT
     c
     d
     """
