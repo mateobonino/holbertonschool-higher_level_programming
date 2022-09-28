@@ -21,5 +21,4 @@ class Student():
             return attributes
 
     def reload_from_json(self, json):
-        if json != {}
-            self.__dict__.update(json)
+        self.__dict__.update(json)
