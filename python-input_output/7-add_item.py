@@ -8,17 +8,11 @@ load_from_json_file == __import__('6-load_from_json_file').load_from_json_file
 import sys
 import json
 
-items_list = []
-
 try:
-    with open('add_item.json', 'w') as f:
-        items_list = load_from_json_file('add_item.json')
-        for i in sys.argv[1:]:
-            items_list.append(i)
-        f.close()
-except IOError:
-    with open('add_item.json', 'w+') as f:
-        items_list = load_from_json_file('add_item.json')
-        for i in sys.argv[1:]:
-            items_list.append(i)
-        f.close()
+    items_list = load_from_json_file('add_item.json')
+except:
+    items_list = []
+for i in range(1, len(sys.argv)):
+    items_list.append(sys.argv[1])
+save_to_json_file(items_list, 'add_item.json')
+
