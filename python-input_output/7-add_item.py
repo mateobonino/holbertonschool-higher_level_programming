@@ -16,7 +16,7 @@ def main():
     except FileNotFoundError:
         pass
     for i in range(1, len(sys.argv)):
-        items_list.append(sys.argv[1])
+        items_list.append(sys.argv[i])
     save_to_json_file(items_list, 'add_item.json')
 
 
