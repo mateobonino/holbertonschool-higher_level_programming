@@ -22,8 +22,8 @@ class Rectangle(Base):
     def width(self, width):
         if not isinstance(y, int):
             raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = width
 
     @property
@@ -34,8 +34,8 @@ class Rectangle(Base):
     def height(self, height):
         if not isinstance(y, int):
             raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
@@ -55,7 +55,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(width, y):
+    def y(self, y):
         # The checker doesnt says nothing about valitadions but
         # is giving me all the checks wrong so im using the same
         # raise expections messages
