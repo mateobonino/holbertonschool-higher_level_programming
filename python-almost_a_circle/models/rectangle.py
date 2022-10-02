@@ -90,4 +90,5 @@ class Rectangle(Base):
         """Prints the rectangle to stdout"""
         for i in range(self.__height):
             for k in range(self.__width):
-                print("#")
+                print("#", end="")
+            print()
