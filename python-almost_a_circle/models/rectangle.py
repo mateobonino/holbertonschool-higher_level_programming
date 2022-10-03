@@ -103,7 +103,7 @@ class Rectangle(Base):
         str2 = "{} - {}/{}".format(self.y, self.width, self.height)
         return str1 + str2
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the attributes in the Class"""
         if args is not None:
             if args[0]:
@@ -116,3 +116,17 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) > 4:
                 self.__y = args[4]
+        else:
+            for i in kwargs:
+                if i == 'y':
+                    self.__y = kwargs[i]
+                if i == 'x':
+                    self.__x = kwargs[i]
+                if i == 'height':
+                    self.__height = kwargs[i]
+                if i == 'width':
+                    self.__width = kwargs[i]
+                if i == 'id':
+                    self.id = kwargs[i]
+                else:
+                    break
