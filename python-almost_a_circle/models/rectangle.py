@@ -102,3 +102,10 @@ class Rectangle(Base):
         str1 = "[Rectangle] ({}) {}/".format(self.id, self.x)
         str2 = "{} - {}/{}".format(self.y, self.width, self.height)
         return str1 + str2
+
+    def update(self, *args):
+        self.__id = args[0]
+        self.__width = args[1]
+        self.__height = args[2]
+        self.__x = args[3]
+        self.__y = args[4]
