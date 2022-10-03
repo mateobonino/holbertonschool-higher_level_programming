@@ -107,7 +107,7 @@ class Rectangle(Base):
         """Updates the attributes in the Class"""
         if args is not None:
             if args[0]:
-                self.__id = args[0]
+                self.id = args[0]
             if len(args) > 1:
                 self.__width = args[1]
             if len(args) > 2:
