@@ -104,6 +104,7 @@ class Rectangle(Base):
         return str1 + str2
 
     def update(self, *args):
+        """Updates the attributes in the Class"""
         self.__id = args[0]
         self.__width = args[1]
         self.__height = args[2]
