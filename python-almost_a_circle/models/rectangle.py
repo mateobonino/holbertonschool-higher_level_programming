@@ -128,5 +128,3 @@ class Rectangle(Base):
                     self.__width = kwargs[i]
                 if i == 'id':
                     self.id = kwargs[i]
-                else:
-                    break
