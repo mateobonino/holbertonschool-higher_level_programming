@@ -12,11 +12,6 @@ class Square(Rectangle):
         height = size
         super().__init__(width, height, x, y, id)
 
-    def __str__(self):
-        str1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
-        str2 = " - {}".format(self.height)
-        return str1 + str2
-
     @property
     def size(self):
         return self.width
@@ -29,3 +24,8 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = value
         self.__height = value
+
+    def __str__(self):
+        str1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
+        str2 = " - {}".format(self.height)
+        return str1 + str2
