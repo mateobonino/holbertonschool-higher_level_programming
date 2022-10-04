@@ -116,7 +116,7 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) > 4:
                 self.__y = args[4]
-        else:
+        elif len(args) == 0:
             for i, j in kwargs.items():
                 if i == 'y':
                     self.__y = j
