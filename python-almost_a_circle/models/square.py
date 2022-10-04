@@ -13,6 +13,6 @@ class Square(Rectangle):
         super().__init__(width, height, x, y, id)
 
     def __str__(self):
-        str1 = "[Square] ({}) {}/{}".format(self.id, self.__x, self.__y)
-        str2 = " - {}".format(self.__height)
+        str1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
+        str2 = " - {}".format(self.height)
         return str1 + str2
