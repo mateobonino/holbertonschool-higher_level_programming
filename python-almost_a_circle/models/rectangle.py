@@ -118,13 +118,13 @@ class Rectangle(Base):
                 self.__y = args[4]
         elif len(args) == 0:
             for i, j in kwargs.items():
+                if i == 'id':
+                    self.id = j
+                if i == 'width':
+                    self.__width = j
+                if i == 'height':
+                    self.__height = j
+                if i == 'x':
+                    self.__x = j
                 if i == 'y':
                     self.__y = j
-                elif i == 'x':
-                    self.__x = j
-                elif i == 'height':
-                    self.__height = j
-                elif i == 'width':
-                    self.__width = j
-                elif i == 'id':
-                    self.id = j
