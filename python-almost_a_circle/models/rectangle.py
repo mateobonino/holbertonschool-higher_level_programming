@@ -105,7 +105,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Updates the attributes in the Class"""
-        if args is not None:
+        if args:
             if args[0]:
                 self.id = args[0]
             if len(args) > 1:
@@ -116,7 +116,7 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) > 4:
                 self.__y = args[4]
-        elif len(args) == 0:
+        else:
             for i, j in kwargs.items():
                 if i == 'id':
                     self.id = j
