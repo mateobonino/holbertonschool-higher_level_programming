@@ -38,6 +38,8 @@ class Square(Rectangle):
                     self.id = j
                 if i == 'size':
                     self.__size = j
+                    self.__height = j
+                    self.__width = j
                 if i == 'x':
                     self.__x = j
                 if i == 'y':
