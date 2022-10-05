@@ -46,7 +46,7 @@ class Base():
         """returns a list of instances"""
         fname = cls.__name__ + '.json'
         if os.path.exists(fname):
-            with open(fname) as f:
+            with open(fname, 'r') as f:
                 instances_l = []
                 json_list = cls.from_json_string(f.read())
                 for i in json_list:
