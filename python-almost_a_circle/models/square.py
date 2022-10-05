@@ -29,21 +29,21 @@ class Square(Rectangle):
             if len(args) > 1:
                 self.size = args[1]
             if len(args) > 2:
-                self.__x = args[2]
+                self.x = args[2]
             if len(args) > 3:
-                self.__y = args[3]
+                self.y = args[3]
         else:
             for i, j in kwargs.items():
                 if i == 'id':
                     self.id = j
                 if i == 'size':
-                    self.__size = j
-                    self.__height = j
-                    self.__width = j
+                    self.size = j
+                    self.height = j
+                    self.width = j
                 if i == 'x':
-                    self.__x = j
+                    self.x = j
                 if i == 'y':
-                    self.__y = j
+                    self.y = j
 
     def __str__(self):
         str1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
