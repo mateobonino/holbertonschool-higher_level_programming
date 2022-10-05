@@ -33,7 +33,7 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
-        if csl.__name__ == "Square":
+        if cls.__name__ == "Square":
             inst = cls(1)
         elif cls.__name__ == "Rectangle":
             inst = cls(1, 1)
