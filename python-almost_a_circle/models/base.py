@@ -35,7 +35,7 @@ class Base():
         """returns an instance with all attributes already set"""
         if csl.__name__ == "Square":
             inst = cls(1)
-        if cls.__name__ == "Rectangle":
+        elif cls.__name__ == "Rectangle":
             inst = cls(1, 1)
         inst.update(**dictionary)
         return inst
