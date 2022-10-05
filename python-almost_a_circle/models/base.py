@@ -2,6 +2,9 @@
 """Base class"""
 
 
+import json
+
+
 class Base():
     """Base clase"""
     __nb_objects = 0
@@ -12,3 +15,8 @@ class Base():
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return '[]'
+        return json.dumps(list_dictionaries)
