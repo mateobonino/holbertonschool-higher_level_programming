@@ -128,3 +128,8 @@ class Rectangle(Base):
                     self.__x = j
                 if i == 'y':
                     self.__y = j
+
+    def to_dictionary(self):
+        str1 = {'id': self.id, 'width': self.__width, 'height': self.__height}
+        str2 = {'x': self.x, 'y': self.y}
+        return str1 + str2
