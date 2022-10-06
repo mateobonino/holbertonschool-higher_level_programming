@@ -14,3 +14,6 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(Base(59).id, 59)
 
         self.assertEqual(Base().to_json_string([]), [])
+
+if __name__ == "__main__":
+    unittest.main()
