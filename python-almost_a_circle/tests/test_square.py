@@ -63,3 +63,11 @@ class Test_Square(unittest.TestCase):
         squ1 = Square(3, 3, 2, 0)
         squ2 = Square(4, 4, 5, 3)
         self.assertEqual(Square.save_to_file([squ1, squ2]), 0)
+
+    def test_11(self):
+        Square.load_from_file()
+        square1 = Square(3, 3, 4, 0)
+        square2 = Square(5, 5)
+        list_square_input = [square1, square2]
+        Square.save_to_file(list_square_input)
+        list_square_output = Square.load_from_file()
