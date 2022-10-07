@@ -10,14 +10,14 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_2(self):
         rect2 = Rectangle(1, 2, 3)
-        self.assertEqual(rect2.id, 9)
+        self.assertEqual(rect2.id, 10)
         self.assertEqual(rect2.width, 1)
         self.assertEqual(rect2.height, 2)
         self.assertEqual(rect2.x, 3)
 
     def test_3(self):
         rect3 = Rectangle(1, 2, 3, 4)
-        self.assertEqual(rect3.id, 10)
+        self.assertEqual(rect3.id, 11)
         self.assertEqual(rect3.width, 1)
         self.assertEqual(rect3.height, 2)
         self.assertEqual(rect3.x, 3)
@@ -55,18 +55,18 @@ class Test_Rectangle(unittest.TestCase):
         
     def test_8(self):
         rect5 = Rectangle(3, 3)
-        self.assertEqual(rect5.id, 11)
+        self.assertEqual(rect5.id, 12)
         self.assertEqual(rect5.width, 3)
         self.assertEqual(rect5.height, 3)
         self.assertEqual(rect5.area(), 9)
 
     def test_9(self):
         rect6 = Rectangle(3, 3, 3, 3)
-        self.assertEqual(rect6.id, 12)
+        self.assertEqual(rect6.id, 13)
         self.assertEqual(rect6.width, 3)
         self.assertEqual(rect6.height, 3)
         self.assertEqual(rect6.area(), 9)
-        self.assertEqual(rect6.__str__(), "[Rectangle] (12) 3/3 - 3/3")
+        self.assertEqual(rect6.__str__(), "[Rectangle] (13) 3/3 - 3/3")
 
     def test_10(self):
         rect7 = Rectangle(3, 2, 0, 0)
@@ -81,4 +81,7 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(rect9.id, 14)
         rect9.update(id=5)
         self.assertEqual(rect9.id, 5)
-        
+
+    def test_13(self):
+        rect10 = Rectangle.create(**{'id': 89})
+        self.assertEqual(rect10.id, 89)
