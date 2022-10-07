@@ -62,6 +62,6 @@ class Base():
             listtt = []
             for i in list_objs:
                 listtt.append(i.to_dictionary())
-            with open(fname, "w+") as f:
+            with open(fname, "w") as f:
                 f.write(Base.to_json_string(listtt))
                 return f.read()
