@@ -88,14 +88,20 @@ class Rectangle(Base):
 
     def display(self):
         """Prints the rectangle to stdout"""
+        c = ''
         for y in range(self.__y):
             print()
+            c += '\n'
         for i in range(self.__height):
             for x in range(self.__x):
                 print(" ", end="")
+                c += ' '
             for k in range(self.__width):
                 print("#", end="")
+                c += '#'
             print()
+            c += '\n'
+        return c
 
     def __str__(self):
         """Returns the specified string"""
