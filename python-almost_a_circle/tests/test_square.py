@@ -58,3 +58,8 @@ class Test_Square(unittest.TestCase):
     def test_9(self):
         sq8 = Square.create(**{'id': 89})
         self.assertEqual(sq8.id, 89)
+
+    def test_10(self):
+        squ1 = Square(3, 3, 2, 0)
+        squ2 = Square(4, 4, 5, 3)
+        self.assertEqual(Square.save_to_file([squ1, squ2]), 0)
