@@ -71,4 +71,14 @@ class Test_Rectangle(unittest.TestCase):
     def test_10(self):
         rect7 = Rectangle(3, 2, 0, 0)
         self.assertEqual(rect7.display(), "###\n###\n")
+
+    def test_11(self):
+        rect8 = Rectangle(3, 2, 1, 2, 15)
+        self.assertEqual(rect8.to_dictionary(), {'id': 15, 'width': 3, 'height': 2, 'x': 1, 'y': 2})
+
+    def test_12(self):
+        rect9 = Rectangle(10, 5, 0, 0, 14)
+        self.assertEqual(rect9.id, 14)
+        rect9.update(id=5)
+        self.assertEqual(rect9.id, 5)
         
