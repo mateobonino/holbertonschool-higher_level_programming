@@ -68,4 +68,4 @@ class Base():
         else:
             fname = str(cls.__name__) + '.json'
             with open(fname, "w+") as f:
-                f.write('')
+                f.write([])
