@@ -54,3 +54,7 @@ class Test_Square(unittest.TestCase):
         self.assertEqual(sq7.size, 1)
         sq7.update(2, 2, 0, 15)
         self.assertEqual(sq7.size, 2)
+
+    def test_9(self):
+        sq8 = Square.create(**{'id': 89})
+        self.assertEqual(sq8.id, 89)
