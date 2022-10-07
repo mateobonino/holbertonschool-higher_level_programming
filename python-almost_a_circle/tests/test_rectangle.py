@@ -70,5 +70,5 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_10(self):
         rect7 = Rectangle(3, 2, 0, 0)
-        self.assertEqual(rect7.display(), None)
+        self.assertEqual(rect7.display(), "###\n###\n")
         
