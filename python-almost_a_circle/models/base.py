@@ -67,5 +67,6 @@ class Base():
                 return f.read()
         else:
             fname = str(cls.__name__) + '.json'
+            listt = []
             with open(fname, "w+") as f:
-                f.write([])
+                f.write(Base.to_json_string(listt))
