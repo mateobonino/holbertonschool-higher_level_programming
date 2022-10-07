@@ -85,3 +85,8 @@ class Test_Rectangle(unittest.TestCase):
     def test_13(self):
         rect10 = Rectangle.create(**{'id': 89})
         self.assertEqual(rect10.id, 89)
+
+    def test_14(self):
+        recc1 = Rectangle(3, 3, 2, 0, 56)
+        recc2 = Rectangle(4, 4, 5, 3, 15)
+        self.assertEqual(Rectangle.save_to_file([recc1, recc2]), 0)

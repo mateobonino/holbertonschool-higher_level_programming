@@ -64,9 +64,10 @@ class Base():
                 listtt.append(i.to_dictionary())
             with open(fname, "w+") as f:
                 f.write(Base.to_json_string(listtt))
-                return f.read()
+                return 0
         else:
             fname = str(cls.__name__) + '.json'
             listt = []
             with open(fname, "w+") as f:
                 f.write(Base.to_json_string(listt))
+                return 1
