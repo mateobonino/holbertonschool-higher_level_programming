@@ -1,3 +1,3 @@
 -- task 1
 -- create database 
-CREATE DATABASE hbtn_0c_o
+CREATE DATABASE IF NOT EXISTS hbtn_0c_o
