@@ -1,5 +1,5 @@
 -- task 15
 -- number of records
-SELECT score, COUNT(*) AS 'number' FROM second_table
+SELECT score, COUNT(*) number FROM second_table
 GROUP BY score
-ORDER BY 'number' DESC;
+ORDER BY score DESC;
