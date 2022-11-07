@@ -14,6 +14,6 @@ if __name__ == '__main__':
                          host="localhost", port=3306)
     cursor = db.cursor()
     arg4 = sys.argv[4]
-    cursor.execute(f"SELECT * FROM states WHERE BINARY name = '%s'" % (arg4,))
+    cursor.execute(f"SELECT * FROM states WHERE BINARY name = %s" % (arg4,))
     for i in cursor.fetchall():
         print(i)
