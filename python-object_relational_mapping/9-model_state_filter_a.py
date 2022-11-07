@@ -22,5 +22,5 @@ if __name__ == '__main__':
 
     result = session.query(State).order_by(State.id).all()
     for i in result:
-        if "a" in i:
+        if "a" in i.name:
             print(f"{i.id}: {i.name}")
