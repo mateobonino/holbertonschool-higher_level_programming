@@ -18,6 +18,4 @@ if __name__ == '__main__':
                                       pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for j in session.query(State).order_by(State.id).all():
-        print("{}; {}".format(j.id, j.name))
-        break
+    print(session.query(State).order_by(State.id).first())
