@@ -16,11 +16,10 @@ if __name__ == '__main__':
     host = "localhost"
     engine = sqlalchemy.create_engine("mysql+mysqldb://{}:{}@{}/{}"
                                       .format(user, passwd, host, database),
-                                      pool_pre_engine=True)
+                                      pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).order_by(State.id).all()
-    for i in result:
+    for i in session.query(State).order_by(State.id).all():
         if "a" in i.name:
             print(f"{i.id}: {i.name}")
