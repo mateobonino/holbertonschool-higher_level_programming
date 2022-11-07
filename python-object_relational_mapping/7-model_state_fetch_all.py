@@ -14,13 +14,12 @@ if __name__ == '__main__':
     database = sys.argv[3]
     host = "localhost"
     port = 3306
-    engine = sqlalchemy.create_engine("mysql+mysqldb://{}:{}@{}:{}/{}"
-                                      .format(user, passwd, host, 
-                                      port, database),
+    engine = sqlalchemy.create_engine("mysql+mysqldb://{}:{}@{}/{}"
+                                      .format(user, passwd, host,
+                                              database),
                                       pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State).order_by(State.id).all()
     for i in result:
-        print("{}: {}".format(State.id, State.name))
-                                      
+        print("{}: {}".format(i.id, i.name))
