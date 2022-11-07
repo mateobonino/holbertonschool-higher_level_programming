@@ -17,11 +17,15 @@ if __name__ == '__main__':
     cursor.execute("""SELECT cities.name FROM cities, states WHERE
                    cities.state_id = states.id AND states.name = %s""",
                    (arg4,))
-    states = []
-    for i in cursor.fetchall():
-        states.append(i[0])
-    for i in range(0, len(states), 1):
-        if i == len(states) or i == len(states) - 1:
-            print(states[i])
-        else:
-            print(states[i], end=', ')
+    fcall = cursor.fetchall()
+    if fcall:
+        states = []
+        for i in fcall:
+            states.append(i[0])
+        for i in range(0, len(states), 1):
+            if i == len(states) or i == len(states) - 1:
+                print(states[i])
+            else:
+                print(states[i], end=', ')
+    else:
+        print()
