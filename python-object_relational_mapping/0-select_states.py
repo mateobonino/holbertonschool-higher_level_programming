@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+# lists the content of "states" table from "hbtn_0e_0_usa" database
+# pass args via the command line to specify the user, password and database
+
 import MySQLdb
 import sys
 
-db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3], host="localhost", port=3306)
+db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3],
+                     host="localhost", port=3306)
 
 cursor = db.cursor()
 cursor.execute("SELECT * from states")
