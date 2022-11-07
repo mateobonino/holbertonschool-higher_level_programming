@@ -14,8 +14,9 @@ if __name__ == '__main__':
                          host="localhost", port=3306)
     cursor = db.cursor()
     arg4 = sys.argv[4]
-    cursor.execute("""SELECT cities.name FROM cities, states WHERE 
-                   cities.state_id = states.id AND states.name = %s""", (arg4,))
+    cursor.execute("""SELECT cities.name FROM cities, states WHERE
+                   cities.state_id = states.id AND states.name = %s""",
+                   (arg4,))
     states = []
     for i in cursor.fetchall():
         states.append(i[0])
@@ -24,4 +25,3 @@ if __name__ == '__main__':
             print(states[i])
         else:
             print(states[i], end=', ')
-        
