@@ -23,6 +23,6 @@ if __name__ == '__main__':
     session = Session()
     for i in session.query(State).order_by(State.id).all():
         if "a" in i.name:
-            toDelete = session.query.filter_by(id=i.id).one()
+            toDelete = session.query(State).get(i.id)
             session.delete(toDelete)
-        session.commit()
+            session.commit()
