@@ -21,6 +21,6 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    for i in session.query(State).order_by(State.id).all():
-        if i.id == 2:
-            i.name = "New Mexico"
+    toUpdate = session.query(State).get(2)
+    toUpdate.name = "New Mexico"
+    session.commit()
