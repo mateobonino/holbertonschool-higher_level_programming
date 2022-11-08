@@ -25,4 +25,4 @@ if __name__ == '__main__':
         if "a" in i.name:
             toDelete = session.query.filter_by(id=i.id).one()
             session.delete(toDelete)
-            session.commit()
+        session.commit()
