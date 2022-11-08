@@ -25,3 +25,6 @@ if __name__ == '__main__':
         if "a" in i.name:
             session.delete(i)
     session.commit()
+
+    for j in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(j.id, j.name))
