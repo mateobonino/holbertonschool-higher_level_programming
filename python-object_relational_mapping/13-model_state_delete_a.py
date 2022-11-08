@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    for i in session.query(State):
+    for i in session.query(State).order_by(State.id).all():
         # if "a" in i.name:
         #     session.delete(i)
         for c in i.name:
