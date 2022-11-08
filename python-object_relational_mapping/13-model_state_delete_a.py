@@ -22,7 +22,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     for i in session.query(State).order_by(State.id).all():
-        if "a" in i.name or "aa" in i.name or "aaa" in i.name:
-            toDelete = session.query(State).get(i.id)
-            session.delete(toDelete)
-            session.commit()
+        if "a" in i.name:
+            session.delete(i)
+    session.commit()
