@@ -7,7 +7,7 @@ class Square extends MySquare {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+      console.log(c.repeat(this.width));
     }
   }
 }
