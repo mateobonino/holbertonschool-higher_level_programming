@@ -12,7 +12,6 @@ function factorial (num) {
 
 if (process.argv[2] === undefined) {
   console.log(factorial(1));
-}
-else {
+} else {
   console.log(factorial(parseInt(process.argv[2], 10)));
 }
