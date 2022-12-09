@@ -10,4 +10,9 @@ function factorial (num) {
   return (num * factorial(num - 1));
 }
 
-console.log(factorial(parseInt(process.argv[2], 10)));
+if (process.argv[2] === undefined) {
+  console.log(factorial(1));
+}
+else {
+  console.log(factorial(parseInt(process.argv[2], 10)));
+}
