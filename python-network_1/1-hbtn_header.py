@@ -10,4 +10,4 @@ from sys import argv
 
 with request.urlopen(argv[1]) as response:
     body = response.info()
-    print(body["X-Request-Id"])
+print(body["X-Request-Id"])
