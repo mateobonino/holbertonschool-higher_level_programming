@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    Get the value of the X-Request-Id
+    variable in the response headers
+    of the passed URL
+"""
 from urllib import request
 from sys import argv
 
