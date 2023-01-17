@@ -4,9 +4,10 @@
     variable in the response headers
     of the passed URL
 """
-from urllib import request
-from sys import argv
+if __name__ == "__main__":
+    from urllib import request
+    from sys import argv
 
-with request.urlopen(argv[1]) as response:
-    body = response.info()["X-Request-Id"]
-print(body)
+    with request.urlopen(argv[1]) as response:
+        body = response.info()["X-Request-Id"]
+    print(body)
