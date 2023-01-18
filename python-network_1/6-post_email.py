@@ -9,5 +9,6 @@ if __name__ == "__main__":
     import requests
     from sys import argv
     params = {'email': argv[2]}
-    with requests.post(url=argv[1], params=params) as req:
+    forJson = {'email': argv[2]}
+    with requests.post(url=argv[1], params=params, json=forJson) as req:
         print(req._content.decode())
