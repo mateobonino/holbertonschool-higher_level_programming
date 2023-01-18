@@ -8,8 +8,6 @@ if __name__ == "__main__":
     from sys import argv
     try:
         with request.urlopen(argv[1]) as response:
-            myResponse = response.read().decode('utf-8')
+            myResponse = response.read().decode()
     except Exception as error:
-        if error.__dict__['code'] == 200:
-            print("Regular request")
         print("Error code: {}".format(error.__dict__['code']))
