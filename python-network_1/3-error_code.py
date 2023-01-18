@@ -10,4 +10,4 @@ if __name__ == "__main__":
         with request.urlopen(argv[1]) as response:
             myResponse = response.read().decode()
     except error.HTTPError as wrong:
-        print("Error code: {}".format(wrong.__dict__['code']))
+        print("Error code: {}".format(wrong.code))
