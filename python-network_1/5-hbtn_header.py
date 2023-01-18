@@ -8,5 +8,8 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
-    with requests.get(argv[1]) as response:
-        print(response.headers['X-Request-Id'])
+    try:
+        with requests.get(argv[1]) as response:
+            print(response.headers['X-Request-Id'])
+    except Exception as err:
+        print(None)
