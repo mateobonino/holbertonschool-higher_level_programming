@@ -11,4 +11,4 @@ if __name__ == "__main__":
     params = {'email': argv[2]}
     forJson = {'email': argv[2]}
     with requests.post(url=argv[1], params=params, json=forJson) as req:
-        print(req._content.decode())
+        print("Email: {}".format(argv[2]))
