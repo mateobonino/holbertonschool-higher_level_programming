@@ -15,9 +15,9 @@ if __name__ == "__main__":
     with requests.post(url, data=myData) as response:
         try:
             myResponse = response.json()
+            if len(list(myResponse.keys())) >= 2:
+                print("[{}] {}".format(myResponse['id'], myResponse['name']))
+            else:
+                print("No result")
         except Exception as invalid:
             print("Not a valid JSON")
-        if len(list(myResponse.keys())) >= 2:
-            print("[{}] {}".format(myResponse['id'], myResponse['name']))
-        else:
-            print("No result")
