@@ -17,7 +17,7 @@ if __name__ == "__main__":
             myResponse = response.json()
         except Exception as invalid:
             print("Not a valid JSON")
-        if 'id' not in myResponse.keys() or 'name' not in myResponse.keys():
+        if len(list(myResponse.keys())) >= 2:
             print("[{}] {}".format(myResponse['id'], myResponse['name']))
         else:
             print("No result")
